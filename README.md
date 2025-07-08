@@ -2,6 +2,7 @@
 This repository provides a comprehensive guide and code examples for interfacing the NRF24L01 wireless communication module with Arduino. It includes wiring diagrams, setup instructions, example code, and a detailed implementation of Bluetooth jamming across channels 0 to 79, specifically targeting Bluetooth advertising channels 37, 38, and 39.
 
 GitHub Repository: [NRF24-BlueJammer](https://github.com/jbalagiya/NRF24-BlueJammer)
+☕ Support: [Buy Me a Coffee](https://buymeacoffee.com/jbalagiya)
 
 ## Overview
 
@@ -67,6 +68,13 @@ Here is a basic example to initialize communication:
 
 ### Contributions
 - Feel free to fork this repository and create pull requests for improvements or additional examples.
+
+## ☕ Support
+
+If you found this project helpful or interesting, consider supporting my work:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buymeacoffee.com/jbalagiya)
+
 
 ### Disclaimer
 This project is for educational purposes only. How you use this information is your own responsibility. I will not be held accountable for any illegal activities.
