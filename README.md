@@ -1,81 +1,80 @@
-# NRF24L01 with Arduino: Bluetooth Jamming
-This repository provides a comprehensive guide and code examples for interfacing the NRF24L01 wireless communication module with Arduino. It includes wiring diagrams, setup instructions, example code, and a detailed implementation of Bluetooth jamming across channels 0 to 79, specifically targeting Bluetooth advertising channels 37, 38, and 39.
+# NRF24L01 with Arduino: Bluetooth Jammer
 
-GitHub Repository: [NRF24-BlueJammer](https://github.com/jbalagiya/NRF24-BlueJammer)
+This repository is a fork of an existing NRF24L01 project and is used for experimenting with wireless behavior in the 2.4 GHz band using Arduino-compatible boards. It documents wiring, setup, and example code based on the original implementation.
 
-☕ Support: [Buy Me a Coffee](https://buymeacoffee.com/jbalagiya)
+The focus of this fork is **personal experimentation and learning**, without changing the original hardware scope or core logic.
 
 ## Overview
 
-The NRF24L01 is a wireless transceiver module that operates in the 2.4GHz band. This project expands upon standard NRF24L01 functionality by utilizing it to disrupt Bluetooth communication channels (0-79), with a focus on advertising channels 37, 38, and 39.
+The NRF24L01 is a 2.4 GHz wireless transceiver commonly used with microcontrollers.  
+This project explores how the module can be configured to transmit across multiple channels in the Bluetooth frequency range, including Bluetooth advertising channels (37, 38, 39).
 
-## Wiring Diagram
+The implementation is kept close to the original project for study and testing purposes.
 
-Below are the wiring details for connecting the NRF24L01 module to an Arduino UNO & nano:
+## Wiring
 
-| **NRF24L01 Pin** | **Arduino UNO Pin** |
-|------------------|--------------------|
-| VCC              | 3.3V              |
-| GND              | GND               |
-| CE               | Pin 9             |
-| CSN (or SCN)     | Pin 10            |
-| SCK              | Pin 13            |
-| MOSI             | Pin 11            |
-| MISO             | Pin 12            |
+Basic wiring between the NRF24L01 module and an Arduino UNO / Nano:
 
-**Note:** Ensure that the NRF24L01 is powered by the 3.3V pin, as connecting it to 5V may damage the module.
+| NRF24L01 Pin | Arduino Pin |
+|--------------|-------------|
+| VCC          | 3.3V        |
+| GND          | GND         |
+| CE           | D9          |
+| CSN          | D10         |
+| SCK          | D13         |
+| MOSI         | D11         |
+| MISO         | D12         |
 
-### Wiring Visuals
+**Important:**  
+The NRF24L01 must be powered at **3.3 V only**. Supplying 5 V can permanently damage the module.
 
-#### Image 1: Wiring Diagram with Arduino UNO & Nano
-![Arduino Wiring](./Connections.png)
+### Wiring Reference
 
-![Arduino Wiring](./Connections1.png)
+#### Arduino + NRF24L01 wiring diagrams
 
-#### Image 2: NRF24L01 Pin Layout
+![Arduino Wiring](./Connections-1.png)
+
+![Arduino Wiring](./Connections-2.png)
+
+#### NRF24L01 pinout reference
+
 ![NRF24L01 Pinout](./NRF24.png)
 
 ## Getting Started
 
-### Hardware Requirements
+### Hardware
 
-- Arduino UNO (or compatible board)
-- NRF24L01 module
-- Breadboard and jumper wires
-- Capacitor (10 µF) to stabilize power (optional but recommended)
+- Arduino UNO or compatible board  
+- NRF24L01 module  
+- Breadboard and jumper wires  
+- 10 µF capacitor (recommended for power stability)
 
-### Software Requirements
+### Software
 
-- Arduino IDE
-- RF24 Library ([Download here](https://github.com/tmrh20/RF24))
+- Arduino IDE  
+- RF24 library by TMRh20
 
-### Installation
+### Setup
 
-1. Connect the NRF24L01 module to the Arduino following the wiring diagram.
-2. Install the RF24 library in your Arduino IDE:
-   -  Go to **Sketch > Include Library > Manage Libraries...**
-   -  Search for "RF24" and install the library by TMRh20.
+1. Wire the NRF24L01 to the Arduino as shown above.
+2. Install the RF24 library:
+   - Arduino IDE → Sketch → Include Library → Manage Libraries
+   - Search for **RF24** and install the TMRh20 version.
+3. Upload the example sketch to the board.
 
-### Example Code
+## Notes & Troubleshooting
 
-Here is a basic example to initialize communication:
+- **Module not detected:**  
+  Add a 10 µF capacitor between VCC and GND close to the NRF24L01.
+- **Unstable behavior or short range:**  
+  Check power stability and antenna orientation.
 
-### Troubleshooting
-- Issue: NRF24L01 module doesn't respond.
--Solution: Add a capacitor (10 µF) between the VCC and GND pins to stabilize the power supply.
+## Credits
 
-- Issue: Poor communication range.
-- Solution: Ensure antennas are aligned and not obstructed.
+This repository is based on an existing open-source project.  
+Original implementation and ideas are credited to the original author.
 
-### Contributions
-- Feel free to fork this repository and create pull requests for improvements or additional examples.
+## Disclaimer
 
-### ☕ Support
-
-If you found this project helpful or interesting, consider supporting my work:
-
-[![Buy Me a Coffee](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buymeacoffee.com/jbalagiya)
-
-
-### Disclaimer
-This project is for educational purposes only. How you use this information is your own responsibility. I will not be held accountable for any illegal activities.
+This project is intended for **educational and experimental purposes only**.  
+Users are responsible for understanding and complying with local laws and regulations related to wireless communication.
