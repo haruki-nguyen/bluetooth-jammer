@@ -1,11 +1,12 @@
 /*
- * Arduino Uno with nRF24L01
- *
- * by jbalagiya
- *
- * Library: TMRh20/RF24, https://github.com/tmrh20/RF24/
+ ** Arduino Uno with NRF24L01
+ **
+ ** by jbalagiya
+ **
+ ** Library: nRF24/RF24, https://github.com/nRF24/RF24
  */
 
+#include <Arduino.h>
 #include "RF24.h"
 
 RF24 radio(9, 10); // CE, CSN pins for NRF24L01

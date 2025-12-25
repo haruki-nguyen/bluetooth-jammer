@@ -32,13 +32,13 @@ The NRF24L01 must be powered at **3.3 V only**. Supplying 5 V can permanently da
 
 #### Arduino + NRF24L01 wiring diagrams
 
-![Arduino Wiring](./Connections-1.png)
+![Arduino Wiring](./images/Connections-1.png)
 
-![Arduino Wiring](./Connections-2.png)
+![Arduino Wiring](./images/Connections-2.png)
 
 #### NRF24L01 pinout reference
 
-![NRF24L01 Pinout](./NRF24.png)
+![NRF24L01 Pinout](./images/NRF24.png)
 
 ## Getting Started
 
